@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styles/all-themes.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styles/all-themes.css')}}">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
     <link href='https://fonts.googleapis.com/css?family=Almarai' rel='stylesheet'>
@@ -249,7 +249,7 @@
                                     <a  href="{{route('categories.index')}}">   الفئات   </a>
                                 </li>
                                     <li class="active">
-                                        <a >   المنتجات   </a>
+                                        <a href = "{{route('products.index')}}">   المنتجات   </a>
                                     </li>
                 
                                    
