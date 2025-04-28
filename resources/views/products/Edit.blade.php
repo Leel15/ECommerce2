@@ -9,10 +9,17 @@
                    <h3 class="text-white">تحرير منتج </h3>
                 </div>
                 <div class="card-body">
-                 <form action="{{route('categories.Update')}}" method="POST">
+                 <form action="{{route('products.Update')}}" method="POST">
                     @csrf
                     <input type="hidden" name="id" value = "{{$products->id}}">
                     <div class="row">
+                             <select name = "categories_id" class = "form-select">
+                                @foreach($categoreis as $item)
+                            <option value = "{{$item->id}}">{{$item->name}}</option>
+                            @endforeach
+                            </select>
+                        </div>
+                        <div class="row">
                         <div class="col">
                           <label class="form-label">اسم المنتج</label>
                           <input type="text" class="form-control" name="name" value = "{{$products->name}}">
@@ -36,14 +43,10 @@
                           <input type="text" class="form-control" name="stocke" value = "{{$products->stocke}}">
                        
                         </div>
-                        <div class="col">
-                          <label class="form-label"> الفئة</label>
-                          <input type="text" class="form-control" name="categories_id" value = "{{$products->categories_id}}">
-                       
-                        </div>
+                        
                         <div class="col">
                             <label class="form-label">صورة المنتج</label>
-                            <input type="text" class="form-control" name="image" value = "{{$products->image}}" >
+                            <input type="file" class="form-control" name="image" value = "{{$products->image}}" >
                            
                         </div>
                         

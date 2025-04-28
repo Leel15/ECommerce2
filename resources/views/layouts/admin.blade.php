@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="importmap"></script>
+    <script src="{{asset('js/script.js')}}"></script>
 
     <link rel="stylesheet" href="{{asset('assets/css/common.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -227,7 +229,7 @@
                                     </div>
                                 </div>
                                 <div class="profile-usertitle">
-                                    <div class="sidebar-userpic-name"> سعد سالم  </div>
+                                    <div class="sidebar-userpic-name"> لمياء إبراهيم </div>
                                     <div class="profile-usertitle-job ">  مدير النظام</div>
                                 </div>
                             </li>
@@ -266,6 +268,14 @@
                                         <a asp-controller="PurchaseOrder" asp-action="Create">تحليلات  </a>
                                     </li>
                 
+                                    <li class="active">
+                                        @auth
+                                        <form action = "{{route('logout')}}" method = 'POST' style = "display:inline;">
+                                            @csrf
+                                            <button type='submit' class = 'btn btn-link text-decoration-none'><i class = 'bi bi-box-arrow-in-right'></i></button>
+                                        </form>
+                                        @endauth
+                                    </li>
                                   
                                 </ul>
                                                                                                                 

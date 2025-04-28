@@ -1,6 +1,23 @@
 @extends('layouts.admin')
 @section('content')
-   <div class="container">
+<div class="modal" id = "delete" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">تأكيد الحذف</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>هل تريد حذف هذا السجل ؟</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        <button type="button" class="btn btn-primary" onclick = "ConfirmDelete_Categories()" data-bs-dismiss="modal">حذف</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="container">
       <div class="row mt-5">
          <div class="col d-flex justify-content-center">
             <div class="card">
@@ -61,7 +78,7 @@
                   <td class = "text-center">{{$item->name}}</td>
                   <td class = "text-center">{{$item->description}}</td>
                   <td class = "text-center"><a href="{{route('categories.edit',['id'=>$item->id])}}"><i class="bi bi-pencil-fill text-success"></i></a></td>
-                  <td class = "text-center"><a href="{{route('categories.Delete' , ['id'=>$item->id])}}"><i class="bi bi-trash text-danger"></i></a></td>
+                  <td class = "text-center"><button class = "btn btn-link" onclick = "delete_categories({{$item->id}})"><i class="bi bi-trash text-danger"></i></button></td>
 
                </tr>
                @endforeach

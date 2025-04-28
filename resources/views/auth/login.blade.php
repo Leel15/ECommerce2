@@ -63,6 +63,11 @@
                                     </a>
                                 @endif
                             </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <a class = "btn btn-link" href="{{route('register')}}">Don't have an account? Register here</a>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

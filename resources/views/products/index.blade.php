@@ -8,8 +8,7 @@
                    <h3 class="text-white">إضافة منتج </h3>
                 </div>
                 <div class="card-body">
-                 <form action="{{route('products.create')}}" method="POST">
-                    @csrf
+                <form action="{{route('products.create')}}" method="POST" enctype="multipart/form-data">                    @csrf
                     <div class="row">
                         <div class="col">
                             <select name = "categories_id" class = "form-select">
@@ -86,6 +85,8 @@
                   <td class = "text-center">سعر المنتج</td>
                   <td class = "text-center">الكمية المخزنية</td>
                   <td class = "text-center">صورة المنتج</td>
+                  <td class = "text-center">رقم الفئة</td>
+                  <td class = "text-center">اسم الفئة</td>
                   <td class = "text-center" colspan="2">اجراء </td>
                </tr>
             </thead>
@@ -97,7 +98,9 @@
                   <td class = "text-center">{{$item->descreption}}</td>
                   <td class = "text-center">{{$item->price}}</td>
                   <td class = "text-center">{{$item->stocke}}</td>
-                  <td class = "text-center">{{$item->image}}</td>
+                  <td class = "text-center"><img src = "{{$item->image}}" width = "100" , height = "100"></td>
+                  <td class = "text-center">{{$item->categories_id}}</td>
+                  <td class = "text-center">{{$item->categoy->name}}</td>
                   <td class = "text-center"><a href="{{route('products.Edit',['id'=>$item->id])}}"><i class="bi bi-pencil-fill text-success"></i></a></td>
                   <td class = "text-center"><a href="{{route('products.Delete' , ['id'=>$item->id])}}"><i class="bi bi-trash text-danger"></i></a></td>
 
