@@ -9,7 +9,7 @@
                    <h3 class="text-white">تحرير منتج </h3>
                 </div>
                 <div class="card-body">
-                 <form action="{{route('products.Update')}}" method="POST">
+                 <form action="{{route('products.Update')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="id" value = "{{$products->id}}">
                     <div class="row">

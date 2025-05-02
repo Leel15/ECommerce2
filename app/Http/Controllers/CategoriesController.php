@@ -22,7 +22,9 @@ class CategoriesController extends Controller
 
        $arr=[
         'name'=>$request->categ_name,
-        'description'=>$request->categ_descreption
+        'description'=>$request->categ_descreption,
+        'icon' => $request->icon,
+
        ];
 
        $items=Categories::Create($arr);
@@ -54,8 +56,9 @@ class CategoriesController extends Controller
 
         $data->update([
             'name'=>$request->categ_name,
-            'description'=>$request->categ_descreption
-        ]);
+            'description'=>$request->categ_descreption,
+             'icon' => $request->icon,
+                    ]);
 
         return redirect()->route('categories.index');
 

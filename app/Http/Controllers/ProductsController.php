@@ -93,7 +93,7 @@ class ProductsController extends Controller
 public function Update(Request $request){
 
    $validate = $request->validate([
-      'image' => 'required|image|mimes:jpeg,png,jpg,pdf,gif',
+      'image' => 'nullable|image|mimes:jpeg,png,jpg,pdf,gif',
   ]);
 
    $data = products::find($request->id);
@@ -111,7 +111,7 @@ public function Update(Request $request){
          'categories_id' =>$request->categories_id,
           'image' =>Storage::url($path),
   ]);
-  return redirect()->route('products.index');
+  return redirect()->route('products.index')->with('success', 'تم تحديث المنتج بنجاح!');
 
 }
 }

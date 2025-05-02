@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\Shooping;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -16,11 +17,23 @@ Route::post('/logout', function (Request $request) {
     return redirect('/'); 
 })->name('logout');
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
+
+
+Route::get('/',[Shooping::class,'GetCategories'])->name('index');
+
 
 Auth::routes();
+
+Route::prefix('shopping')->group(function(){
+    Route::get('/list/{categories_id}',[Shooping::class,'List'])->name('shooping.list');
+    Route::get('/details/{id}',[Shooping::class,'Details'])->name('shopping.details');
+    Route::post('/addtocart',[Shooping::class,'Add_to_cart'])->name('shopping.cart');
+    Route::get('/checkout',[Shooping::class,'Checkout'])->name('shopping.checkout');
+    Route::post('/pay',[Shooping::class,'pay'])->name('shopping.pay');
+
+    
+
+});
 
 Route::prefix('dashboard')->middleware('auth')->group(function(){
 

@@ -16,6 +16,6 @@ class products extends Model
     ];
 
     public function categoy(){
-        return $this->belongsTO(Categories::class ,'categories_id','id');
+        return $this->belongsTo(Categories::class ,'categories_id','id');
     }
 }

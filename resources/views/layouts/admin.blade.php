@@ -34,9 +34,8 @@
                     <a href="#" onClick="return false;" class="navbar-toggle collapsed" data-bs-toggle="collapse"
                        data-bs-target="#navbar-collapse" aria-expanded="false"></a>
                     <a href="#" onClick="return false;" class="bars"></a>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/images/logo.png" alt="" />
-                        <span class="logo-name"> لوحة المدير   </span>
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <span class="logo-name">لوحة المدير</span>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -48,20 +47,17 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Full Screen Button -->
                         <li class="fullscreen">
                             <a href="javascript:;" class="fullscreen-btn">
-                                <i class="fas fa-expand"></i>
+                                <i class="fas fa-expand" style="color: rgb(149, 21, 204);"></i>
                             </a>
                         </li>
-                        <!-- #END# Full Screen Button -->
-                        <!-- #START# Notifications-->
-                        <li class="dropdown">
+                        <li class="dropdown" >
                             <a href="#" onClick="return false;" class="dropdown-toggle" data-bs-toggle="dropdown"
                                role="button">
-                                <i class="far fa-bell"></i>
-                                <span class="notify"></span>
-                                <span class="heartbeat"></span>
+                                <i class="far fa-bell" style="color: rgb(149, 21, 204);"></i>
+                                <span class="notify" ></span>
+                                <span class="heartbeat" ></span>
                             </a>
                             <ul class="dropdown-menu pullDown">
                                 <li class="header">NOTIFICATIONS</li>
@@ -70,12 +66,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user1.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">Sarah Smith</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> 14 mins ago
+                                                        <i class="material-icons" style="color: rgb(149, 21, 204);">access_time</i> 14 mins ago
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -84,12 +80,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user2.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">Airi Satou</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> 22 mins ago
+                                                        <i class="material-icons" style="color: rgb(149, 21, 204);">access_time</i> 22 mins ago
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -98,12 +94,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user3.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">John Doe</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> 3 hours ago
+                                                        <i class="material-icons" style="color: rgb(149, 21, 204);">access_time</i> 3 hours ago
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -112,12 +108,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user4.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">Ashton Cox</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> 2 hours ago
+                                                        <i class="material-icons" style="color: rgb(149, 21, 204);">access_time</i> 2 hours ago
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -126,12 +122,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user5.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">Cara Stevens</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> 4 hours ago
+                                                        <i class="material-icons"  style="color: rgb(149, 21, 204);">access_time</i> 4 hours ago
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -140,12 +136,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user6.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">Charde Marshall</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> 3 hours ago
+                                                        <i class="material-icons"  style="color: rgb(149, 21, 204);">access_time</i> 3 hours ago
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -154,12 +150,12 @@
                                         <li>
                                             <a href="#" onClick="return false;">
                                                 <span class="table-img msg-user">
-                                                    <img src="assets/images/user/user7.jpg" alt="">
+                                                <img src="{{ asset('assets/images/user3.png') }}" alt="">
                                                 </span>
                                                 <span class="menu-info">
                                                     <span class="menu-title">John Doe</span>
                                                     <span class="menu-desc">
-                                                        <i class="material-icons">access_time</i> Yesterday
+                                                        <i class="material-icons"  style="color: rgb(149, 21, 204);">access_time</i> Yesterday
                                                     </span>
                                                     <span class="menu-desc">Please check your email.</span>
                                                 </span>
@@ -172,42 +168,42 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- #END# Notifications-->
                         <li class="dropdown user_profile">
                             <div class="dropdown-toggle" data-bs-toggle="dropdown">
-                                <img src="assets/images/user.jpg" alt="user">
-                            </div>
+                            <i class="bi bi-person-square"  style="color: rgb(149, 21, 204);"></i>                            </div>
                             <ul class="dropdown-menu pullDown">
                                 <li class="body">
                                     <ul class="user_dw_menu">
                                         <li>
-                                            <a href="#" onClick="return false;">
+                                            <a href="#">
                                                 <i class="material-icons">person</i>Profile
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" onClick="return false;">
+                                            <a href="#" >
                                                 <i class="material-icons">feedback</i>Feedback
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" onClick="return false;">
+                                            <a href="#" >
                                                 <i class="material-icons">help</i>Help
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#" onClick="return false;">
-                                                <i class="material-icons">power_settings_new</i>Logout
-                                            </a>
-                                        </li>
+                                        <li class="active">
+                                        @auth
+                                        <form action = "{{route('logout')}}" method = 'POST' style = "display:inline;">
+                                            @csrf
+                                            <button type='submit' class = 'btn btn-link text-decoration-none'><i class = 'bi bi-box-arrow-in-right text-danger'>Logout</i></button>
+                                        </form>
+                                        @endauth
+                                    </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <!-- #END# Tasks -->
                         <li class="pull-right">
                             <a href="#" onClick="return false;" class="js-right-sidebar" data-close="true">
-                                <i class="fas fa-cog"></i>
+                                <i class="fas fa-cog" style="color: rgb(149, 21, 204);"></i>
                             </a>
                         </li>
                     </ul>
@@ -225,11 +221,10 @@
                             <li class="sidebar-user-panel active">
                                 <div class="user-panel">
                                     <div class=" image">
-                                        <img src="assets/images/user/user.png" class="user-img-style" alt="User Image" />
-                                    </div>
+                                        <img src="{{ asset('assets/images/user.jpg') }}" alt="Logo" style="height: 80px; width:400px;" />                                    </div>
                                 </div>
                                 <div class="profile-usertitle">
-                                    <div class="sidebar-userpic-name"> لمياء إبراهيم </div>
+                                    <div class="sidebar-userpic-name">{{ Auth::user()->name }}</div>
                                     <div class="profile-usertitle-job ">  مدير النظام</div>
                                 </div>
                             </li>
@@ -348,6 +343,10 @@
     <script  src="{{asset('assets/js/bundles/amcharts5/map.js')}}"></script>
 
     <script  src="{{asset('assets/js/bundles/amcharts5/percent.js')}}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
 
 
 </body>

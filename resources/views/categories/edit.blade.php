@@ -23,6 +23,14 @@
                             <input type="text" class="form-control" name="categ_descreption" value = "{{$categories->description}}" >
                            
                         </div>
+
+                        <div class="col">
+                            <label class="form-label">الأيقونة</label>
+                            <input type="text" class="form-control" name="icon" value = "{{$categories->icon}}" >
+                            @error('icon')
+                           <small class = "text-danger">{{$message}}</small>
+                          @enderror
+                        </div>
                     </div>
 
                     <div class="row">

@@ -17,6 +17,7 @@
     </div>
   </div>
 </div>
+
  <div class="container">
       <div class="row mt-5">
          <div class="col d-flex justify-content-center">
@@ -39,6 +40,14 @@
                             <label class="form-label">وصف الفئة</label>
                             <input type="text" class="form-control" name="categ_descreption" >
                             @error('categ_descreption')
+                           <small class = "text-danger">{{$message}}</small>
+                          @enderror
+                        </div>
+
+                        <div class="col">
+                            <label class="form-label">الأيقونة</label>
+                            <input type="text" class="form-control" name="icon" >
+                            @error('icon')
                            <small class = "text-danger">{{$message}}</small>
                           @enderror
                         </div>
