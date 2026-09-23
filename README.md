@@ -41,5 +41,6 @@ The application is structured around several modular controllers handling differ
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd Shopping-World
+   git clone https://github.com/Leel15/ECommerce2.git
+   cd ECommerce2
+
